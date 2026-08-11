@@ -107,6 +107,7 @@
         android:layout_height="60dp"
         android:layout_marginTop="32dp"
         android:text="Registrarse"
+        android:textColor="@color/colorOnPrimary"
         android:textSize="16sp"
         android:textStyle="bold"
         app:cornerRadius="16dp"
@@ -115,9 +116,10 @@
 
     <ProgressBar
         android:id="@+id/progressBar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
         android:visibility="gone"
+        android:indeterminateTint="@color/colorOnPrimary"
         app:layout_constraintBottom_toBottomOf="@id/btnRegister"
         app:layout_constraintEnd_toEndOf="@id/btnRegister"
         app:layout_constraintStart_toStartOf="@id/btnRegister"

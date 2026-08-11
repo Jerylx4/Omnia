@@ -89,6 +89,7 @@
         android:layout_height="56dp"
         android:layout_marginTop="40dp"
         android:text="Ingresar"
+        android:textColor="@color/colorOnPrimary"
         android:textAllCaps="false"
         android:textSize="16sp"
         android:textStyle="bold"
@@ -100,10 +101,9 @@
     <!-- Progress Bar (Se ajustó el color de carga para que contraste con el botón primario) -->
     <ProgressBar
         android:id="@+id/progressBar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:elevation="2dp"
-        android:indeterminateTint="@color/colorSurface"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:indeterminateTint="@color/colorOnPrimary"
         android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="@id/btnLogin"
         app:layout_constraintEnd_toEndOf="@id/btnLogin"

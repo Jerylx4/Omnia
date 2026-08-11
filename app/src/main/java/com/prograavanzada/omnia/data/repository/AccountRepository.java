@@ -55,7 +55,7 @@ public class AccountRepository {
     public void updateAccount(Account account, RepositoryCallback<Void> callback) {
         account.setUpdatedAt(com.google.firebase.Timestamp.now());
         getAccountsCollection().document(account.getId())
-                .set(account) // Sobrescribe el documento con los nuevos datos
+                .set(account)
                 .addOnSuccessListener(aVoid -> callback.onSuccess(null))
                 .addOnFailureListener(callback::onError);
     }

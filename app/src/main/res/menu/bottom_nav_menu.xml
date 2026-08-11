@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_dashboard"
+        android:icon="@drawable/ic_launcher_foreground"
+        android:title="Inicio" />
+    <item
+        android:id="@+id/nav_transactions"
+        android:icon="@drawable/ic_launcher_foreground"
+        android:title="Movimientos" />
+    <item
+        android:id="@+id/nav_budget"
+        android:icon="@drawable/ic_launcher_foreground"
+        android:title="Presupuesto" />
+    <item
+        android:id="@+id/nav_goals"
+        android:icon="@drawable/ic_launcher_foreground"
+        android:title="Metas" />
+    <item
+        android:id="@+id/nav_stats"
+        android:icon="@drawable/ic_launcher_foreground"
+        android:title="Stats" />
+</menu>
