@@ -41,7 +41,7 @@ public class GitHubRepository {
                     String fetchedTag = jsonResponse.getString("tag_name").replace("v", "");
 
                     if(isNewerVersion(fetchedTag, currentVersion)){
-                        String downloadUrl = jsonResponse.getJSONArray("assests")
+                        String downloadUrl = jsonResponse.getJSONArray("assets")
                                 .getJSONObject(0)
                                 .getString("browser_download_url");
 

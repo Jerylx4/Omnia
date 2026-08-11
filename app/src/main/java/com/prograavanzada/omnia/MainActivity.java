@@ -1,5 +1,6 @@
 package com.prograavanzada.omnia;
 
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import androidx.activity.EdgeToEdge;
@@ -8,13 +9,27 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-import com.prograavanzada.omnia.update.UpdateOrchestador;
+import com.google.firebase.FirebaseApp;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.prograavanzada.omnia.ui.auth.LoginActivity;
+import com.prograavanzada.omnia.update.UpdateOrchestrator;
 
 public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        FirebaseApp.initializeApp(this);
+        FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
+        if (currentUser == null) {
+            Intent intent = new Intent(this, LoginActivity.class);
+            startActivity(intent);
+            finish();
+            return;
+        }
+
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
 
@@ -27,13 +42,13 @@ public class MainActivity extends AppCompatActivity {
         try {
             String currentVersion = getPackageManager().getPackageInfo(getPackageName(), 0).versionName;
 
-            UpdateOrchestador updater = new UpdateOrchestador(
+            UpdateOrchestrator updater = new UpdateOrchestrator(
                     this,
                     "Jerylx4",
-                    "TU_REPOSITORIO",
+                    "Omnia",
                     currentVersion
             );
-            updater.executedUpdateFlow();
+            updater.executeUpdateFlow();
 
         } catch (PackageManager.NameNotFoundException e) {
             e.printStackTrace();

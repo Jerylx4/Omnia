@@ -10,7 +10,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:text="Aquí voy a hacer una app que manege mis gastos, mi progreso en la carrera y cositas así funcionales, pero ya tengo para que se actualice sin tener que estar pasandome el apk."
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

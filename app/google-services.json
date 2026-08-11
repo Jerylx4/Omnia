@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "619565132620",
+    "project_id": "omnia-21608",
+    "storage_bucket": "omnia-21608.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:619565132620:android:242d3fd7b3b7d3f41afde9",
+        "android_client_info": {
+          "package_name": "com.prograavanzada.omnia"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCc5Tm1Y9ktAbKPFjWzCMmD5RA_4ueRgFQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
